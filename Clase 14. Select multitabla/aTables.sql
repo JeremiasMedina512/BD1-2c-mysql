@@ -1,4 +1,3 @@
-use onceselectsimple;
 
 create table if not exists area(
 	cod_area varchar(10) primary key,
@@ -31,5 +30,3 @@ create table if not exists trabaja(
     foreign key (cod_area) references area(cod_area)
 );
 
-
-desc trabaja;
