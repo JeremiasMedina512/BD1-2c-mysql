@@ -8,7 +8,10 @@ select * from articulo;
 insert into proveedor(cod_prov) values (1),(2),(3);
 
 -- Ejercicio 3.
-insert into material(cod_mat,descripcion) values (1,"Plastico"),(2,"Goma"), (3,"Vidrio");
+insert into material(cod_mat,descripcion) values 
+	(1,"Plastico"),
+	(2,"Goma"), 
+	(3,"Vidrio");
 
 -- Ejercicio 4. 
 insert into proveedor(cod_prov, nombre, domicilio, fecha_alta) values
@@ -17,10 +20,20 @@ insert into proveedor(cod_prov, nombre, domicilio, fecha_alta) values
     (48,"Valentin","Suipacha","2001-02-13"),
     (57,"Rodolfo","Suipacha","2001-01-01");
 insert into proveedor(cod_prov, nombre, domicilio, fecha_alta) values
-(25,"Raul","Suipacha","2003-01-01");
+	(25,"Raul","Suipacha","2003-01-01");
 select * from proveedor;
 
 -- Ejercicio 5. -- Zarate, Capital Federal, 
 insert into ciudad(cod_ciu,nombre) values 
 (1,"Capital Federal"),
 (2,"Zarate");
+insert into proveedor(cod_prov, nombre, cod_ciu) values 
+	(11,"Lucas",1),
+    (54,"Manuel",1),
+    (76,"Jose", 2);
+
+-- Ejercicio 6. -- La Plata.
+insert into ciudad(cod_ciu, nombre) values 
+	(3,"La Plata");
+insert into proveedor(cod_prov, nombre, cod_ciu) values (125, "Ken", 3),(265,"Ryu",3);
+select * from proveedor;
