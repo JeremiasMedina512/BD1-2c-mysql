@@ -21,11 +21,41 @@ select Proveedor.nombre, Ciudad.nombre from
 Proveedor JOIN Ciudad 
 ON Proveedor.cod_ciu = Ciudad.cod_ciu;
 select * from proveedor;
+select Proveedor.nombre, Ciudad.nombre as Ciudad from  -- Miel
+Proveedor LEFT join Ciudad 
+ON Proveedor.cod_ciu = Ciudad.cod_ciu;
+select * from proveedor;
 
--- Ejercicio 6. 
+-- Ejercicio 6. X
 select PR.nombre from
 Proveedor PR join ciudad
 ON PR.cod_ciu = ciudad.cod_ciu
 where ciudad.nombre = "La Plata";
+
+-- Ejercicio 7. 
+select CON.nro as numeroAlmacen, AR.descripcion, AR.precio, AR.cod_art from 
+Contiene CON JOIN Articulo AR
+ON CON.cod_art = AR.cod_art
+where AR.descripcion = "A";
+desc contiene;
+select * from contiene;
+
+-- Ejercicio 8
+select MAT.cod_mat as codigoMaterial, MAT.descripcion as Descripcion 
+from Provisto_por PP JOIN Material MAT ON PP.cod_mat = MAT.cod_mat
+JOIN Proveedor P ON PP.cod_prov = P.cod_prov JOIN Ciudad C ON
+P.cod_ciu = C.cod_ciu 
+where P.cod_ciu = "Rosario";
+
+SELECT DISTINCT m.cod_mat, m.descripcion
+FROM material m JOIN provisto_por pp ON m.cod_mat = pp.cod_Mat
+JOIN proveedor p ON pp.cod_prov = p.cod_prov
+JOIN ciudad c ON p.cod_ciu = c.cod_ciu
+WHERE c.nombre = 'Rosario';
+
+
+select * from material;
+select * from proveedor;
+select * from provisto_por;
 
 

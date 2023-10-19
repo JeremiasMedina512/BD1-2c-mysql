@@ -34,11 +34,11 @@ create table if not exists ciudad( --
 
 create table if not exists contiene( --
 	nro int,
-    cod_mat int,
+    cod_art int,
     
-    PRIMARY KEY (nro,cod_mat),
+    PRIMARY KEY (nro,cod_art),
     FOREIGN KEY (nro) REFERENCES almacen(nro),
-    FOREIGN KEY (cod_mat) REFERENCES material(cod_mat)
+    FOREIGN KEY (cod_art) REFERENCES Articulo(cod_art) 
 );
 
 create table if not exists compuesto_por( --

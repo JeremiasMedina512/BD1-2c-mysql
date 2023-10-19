@@ -7,7 +7,7 @@ select * from articulo;
 -- Ejercicio 2. 
 insert into proveedor(cod_prov) values (1),(2),(3);
 
--- Ejercicio 3.
+/*-- Ejercicio 3.
 insert into material(cod_mat,descripcion) values 
 	(1,"Plastico"),
 	(2,"Goma"), 
@@ -37,3 +37,31 @@ insert into ciudad(cod_ciu, nombre) values
 	(3,"La Plata");
 insert into proveedor(cod_prov, nombre, cod_ciu) values (125, "Ken", 3),(265,"Ryu",3);
 select * from proveedor;
+*/
+
+-- Ejercicio 7. 
+insert into almacen(nro,nombre, responsable) values	
+	(1,"Lo de tito","Tito"),
+    (2,"Arbys","Arby"),
+    (3,"Lo de julio", "Julio");
+insert into articulo(cod_art, descripcion, precio) values
+	(14,"Escoba", 1000.0),
+    (12,"Tupper",2000.0),
+    (13,"Esponja",500.0);
+insert into articulo(cod_art, descripcion) values 
+	(15,"A");
+select * from articulo;
+-- where cod_art not in (1,2,3,4,5);
+select * from almacen;
+insert into contiene(nro, cod_art) values (2,12),(2,15);
+select * from contiene;
+-- Insertar contenido en la tabla contiene
+
+-- Ejercicio 8 
+insert into ciudad(cod_ciu, nombre) values (4,"Rosario");
+insert into proveedor(cod_prov, cod_ciu) values (4,4),(5,4),(6,4); 
+insert into provisto_por(cod_mat, cod_prov) values(1,6),(2,6),(3,11),(1,76);
+select * from material;
+select * from proveedor;
+select * from ciudad;
+select * from provisto_por;
