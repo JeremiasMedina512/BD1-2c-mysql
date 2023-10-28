@@ -61,6 +61,11 @@ select * from contiene;
 insert into ciudad(cod_ciu, nombre) values (4,"Rosario");
 insert into proveedor(cod_prov, cod_ciu) values (4,4),(5,4),(6,4); 
 insert into provisto_por(cod_mat, cod_prov) values(1,6),(2,6),(3,11),(1,76);
+
+-- Ejercicio 9 
+insert into proveedor(cod_prov, nombre) values (33, "Martin Gomez");
+insert into provisto_por(cod_mat, cod_prov) values (1,33),(2,33),(3,33);
+
 select * from material;
 select * from proveedor;
 select * from ciudad;

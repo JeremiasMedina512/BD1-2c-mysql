@@ -53,9 +53,13 @@ JOIN proveedor p ON pp.cod_prov = p.cod_prov
 JOIN ciudad c ON p.cod_ciu = c.cod_ciu
 WHERE c.nombre = 'Rosario';
 
+-- Ejercicio 9 
+insert into proveedor(cod_prov, nombre) values (33, "Martin Gomez");
+insert into provisto_por(cod_mat, cod_prov) values (33,33);
 
 select * from material;
 select * from proveedor;
 select * from provisto_por;
-
+select * from almacen;
+select * from articulo;
 
