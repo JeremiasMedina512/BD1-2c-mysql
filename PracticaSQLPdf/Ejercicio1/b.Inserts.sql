@@ -39,7 +39,7 @@ insert into proveedor(cod_prov, nombre, cod_ciu) values (125, "Ken", 3),(265,"Ry
 select * from proveedor;
 */
 
--- Ejercicio 7. 
+/*-- Ejercicio 7. 
 insert into almacen(nro,nombre, responsable) values	
 	(1,"Lo de tito","Tito"),
     (2,"Arbys","Arby"),
@@ -65,8 +65,20 @@ insert into provisto_por(cod_mat, cod_prov) values(1,6),(2,6),(3,11),(1,76);
 -- Ejercicio 9 
 insert into proveedor(cod_prov, nombre) values (33, "Martin Gomez");
 insert into provisto_por(cod_mat, cod_prov) values (1,33),(2,33),(3,33);
+*/
+
+-- Ejercicio 11.
+insert into proveedor(cod_prov,nombre) values 
+(79, "ABCedario"),(80,"abc");
+
+-- Ejercicio 13. 
+INSERT INTO contiene(nro, cod_art) VALUES (1,14);
+SELECT * FROM CONTIENE;
+SELECT * FROM ALMACEN;
+SELECT * FROM ARTICULO;
 
 select * from material;
 select * from proveedor;
 select * from ciudad;
 select * from provisto_por;
+select * from articulo;

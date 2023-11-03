@@ -57,6 +57,22 @@ WHERE c.nombre = 'Rosario';
 insert into proveedor(cod_prov, nombre) values (33, "Martin Gomez");
 insert into provisto_por(cod_mat, cod_prov) values (33,33);
 
+-- Ejercicio 11
+DELETE FROM proveedor
+WHERE nombre LIKE "%ABC%";
+
+-- Ejercicio 12.
+SELECT COUNT(*) AS "Cantidad de proveedores con F"
+FROM proveedor
+WHERE nombre like "f%";
+
+-- Ejercicio 13.
+SELECT AVG(Articulo.precio) FROM articulo;
+SELECT * FROM ARTICULO;
+SELECT * FROM ALMACEN;
+SELECT * FROM CONTIENE;
+
+
 select * from material;
 select * from proveedor;
 select * from provisto_por;
